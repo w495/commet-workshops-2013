@@ -1,0 +1,6 @@
+*~
+.eunit
+*.o
+*.beam
+*.plt
+.directory
