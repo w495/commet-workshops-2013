@@ -8,7 +8,7 @@
  *          в двумерном пространстве пиксели оказались близки 
  *          друг другу после линеаризации. 
  *          При обычном слиянии строк матрицы,s это не возможно.
- *          
+ *
  *              |--[Пометка]--------------------------------------------------|
  *              |   На самом деле, такая хитрая линеаризация используется,    |
  *              |   немного по иной причине. Интересует близость, только      |
@@ -43,7 +43,7 @@ program ws04_jpeg_lin;
 const MAXRANGE = 128;
 
 (**
-    @type   size_t  тип индексов массивова и матриц
+    @type   size_t  тип индексов массивов и матриц
             Определяем как отдельный тип,
             на случай, если вдруг, размерности не хватит 
             и его придется заменить. Например на `longint.
@@ -68,7 +68,7 @@ type array_t  = array[1..MAXRANGE] of cell_t;
 (**
     @type   array_t  тип массива из cell_t
 **)
-type matrixcontent_t  = array[1..MAXRANGE] of array_t;      
+type matrixcontent_t  = array[1..MAXRANGE] of array_t;
 
 (**
     @type   matrix_t   тип матрицы — содержимое и размерность.
@@ -118,7 +118,7 @@ type direction_t = (
 
 (**
     @fn matrix_read 
-        Считывает матрицу размераром nrows, ncolumns со стандартного ввода
+        Считывает матрицу размером `nrows`, `ncolumns` со стандартного ввода
         и возвращает ее.
 **)
 function matrix_read(): matrix_t;
@@ -162,7 +162,7 @@ function point_new(): point_t;
 (**
     @fn     point_is_equal 
             Возвращает равенство точек.
-            Точки равны если все их координты равны.
+            Точки равны если все их координаты равны.
 **)
 function point_is_equal(xpoint, ypoint: point_t): boolean;
     begin
@@ -175,24 +175,21 @@ function point_is_equal(xpoint, ypoint: point_t): boolean;
             Возвращает значение следующих координат (точки) ячейки матрицы.
     @param  oldpoint        старые  координаты ячейки;
     @param  currentpoint    текущие координаты ячейки;
-    @param  matrix  матрица, для которой считаем координаты.
+    @param  matrix          матрица, для которой считаем координаты.
 **)
 function point_next(oldpoint, currentpoint: point_t; matrix: matrix_t): point_t;
     var newpoint :point_t;
     begin
-
         (** 
             ... Напишите самостоятельно.
         **)
-        
         point_next := newpoint;
     end;
-    
+
 (**
     @fn main Производит все вычисления, собранные вместе.
-    @param fiction фиктивный параметр, нужен только для PascalABC.
 **)
-procedure main(fiction: boolean);
+procedure main;
     var matrix          :matrix_t;  (** входная матрица  **)
     var oldpoint        :point_t;   (** старые координаты ячейки матрицы **)
     var currentpoint    :point_t;   (** текущие координаты ячейки матрицы **)
@@ -220,7 +217,7 @@ procedure main(fiction: boolean);
     В основном блоке программы происходит только вызов процедуры `main`.
 **)
 begin
-    main(true);
+    main();
 end.
 
 

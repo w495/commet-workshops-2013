@@ -31,7 +31,7 @@ function fillarray(msize :size_t): boolean_array_t;
         fillarray := boolean_array
     end;
 
-procedure main(fiction: boolean);
+procedure main;
     var counter         :size_t;
     var ntrues          :size_t;
     var ntrues_max      :size_t;
@@ -57,7 +57,7 @@ procedure main(fiction: boolean);
     end;
 
 begin
-    main(true);
+    main;
 end.
 
 

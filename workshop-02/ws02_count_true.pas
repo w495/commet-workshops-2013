@@ -3,11 +3,11 @@
  *  @mainpage Подсчет количества элементов массива.
  *
  *  @section ОПИСАНИЕ
- *      Подсчитвает максимальное количество подряд 
+ *      Подсчитывает максимальное количество подряд 
  *      стоящих элементов логического массива, имеющих значение `true`.
  *      Массив создается в программе, так что каждый элемент кратный  
- *      `sFILLARRAY_FACTOR`. становится `false`, остальные `true`.
- *      Размер массива задан константой `MAXSIZE`.      
+ *      `FILLARRAY_FACTOR`. становится `false`, остальные `true`.
+ *      Размер массива задан константой `MAXSIZE`.
  *      
  *      @subsection ЗАДАЧА
  *          Подсчитать максимальное количество подряд 
@@ -24,7 +24,7 @@
  *                  Иначе сбрасываем счетчик до 0.
  *                  Увеличении количества подряд идущих `true` проверяем, 
  *                  не стал ли оно больше чем максимальное.
- *                  Если стало, то принимаем текущее количесвта `true`
+ *                  Если стало, то принимаем текущее количество `true`
  *                  за максимальное.
  *              Продолжаем пока не пройдем весь массив.
  *              Выводи максимальное количество подряд идущих `true`.
@@ -86,10 +86,10 @@ const MAXSIZE = 1024;
 const FILLARRAY_FACTOR = 17;
 
 (**
-    @type   size_t  тип индексов массивова и матриц
+    @type   size_t  тип индексов массивов и матриц
             Определяем как отдельный тип,
             на случай, если вдруг, размерности не хватит 
-            и его придется заменить. Например на `longint.
+            и его придется заменить. Например на `longint`.
     type size_t  = longint; 
 **)
 type size_t  = word;
@@ -107,17 +107,21 @@ type contents_t  = boolean;
 **)
 type boolean_array_t = array[1..MAXSIZE] of contents_t;
 
+(*****************************************************************************
+                ОПИСАНИЕ ФУНКЦИЙ И ПРОЦЕДУР
+ *****************************************************************************)
+
 (**
     @fn fillarray 
-        Возвращает массив размерности msize.
-        Заполняет его значениями 'true' и 'false',
+        Возвращает массив размерности `msize`.
+        Заполняет его значениями `true` и `false`,
         так, что каждый элемент кратный 
-        FILLARRAY_FACTOR становится 'false', остальные 'true'.
+        `FILLARRAY_FACTOR` становится `false`, остальные `true`.
     @param msize размер заполняемого массива.
 **)
 function fillarray(msize :size_t): boolean_array_t;
     (**
-        @var counter   счечик для прохода по массиву.
+        @var counter   счетчик для прохода по массиву.
     **)
     var     counter     :size_t;
     (**
@@ -135,12 +139,12 @@ function fillarray(msize :size_t): boolean_array_t;
         **)
         for counter := 1 to MAXSIZE do begin
             (** 
-                Если остаток от деления номера элемента counter 
-                на FILLARRAY_FACTOR равен нулю 
-                (т.е. counter кратен FILLARRAY_FACTOR),
-                    то boolean_array[counter] = false;
+                Если остаток от деления номера элемента `counter`
+                на `FILLARRAY_FACTOR` равен нулю 
+                (`counter` кратен `FILLARRAY_FACTOR`),
+                    то `boolean_array[counter] = false`;
                 если остаток не равен нулю,
-                    то boolean_array[counter] = false;
+                    то `boolean_array[counter] = false`;
             **)
             value := (0 = (counter mod FILLARRAY_FACTOR));
             boolean_array[counter] := not value;
@@ -161,22 +165,21 @@ function fillarray(msize :size_t): boolean_array_t;
             1) Не запутаемся в большой программе что есть, что.
             2) Не будет пересечения пространств имен.
             3) Проще искать ошибки.
-    @param fiction фиктивный параметр, нужен только для PascalABC.
 **)
-procedure main(fiction: boolean);
+procedure main;
     (**
         @var    counter   
-                счечик для прохода по массиву.
+                счетчик для прохода по массиву.
     **)
     var counter         :size_t;
     (**
         @var    ntrues
-                количество подряд идущих true в массиве.
+                количество подряд идущих `true` в массиве.
     **)
     var ntrues      :size_t;
     (**
         @var    ntrues_max  
-                максимальное количество подряд идущих true в массиве.
+                максимальное количество подряд идущих `true` в массиве.
     **)
     var ntrues_max  :size_t;
     (**
@@ -186,7 +189,7 @@ procedure main(fiction: boolean);
     var boolean_array   :boolean_array_t;
     begin
         ntrues      := 0;
-        ntrues_max   := 0;
+        ntrues_max  := 0;
 
         (** 
             Заполняем массив некоторым образом.
@@ -199,25 +202,25 @@ procedure main(fiction: boolean);
         **)
         for counter:= 1 to MAXSIZE do begin
             (** 
-                Если значение в ячейке равно true,
-                то увеличиваем счетчик ntrues на 1.
+                Если значение в ячейке равно `true`,
+                то увеличиваем счетчик `ntrues` на 1.
                 Иначе сбрасываем счетчик до 0.
                     Может оказаться что массив имеет вид,
-                        [true, false, strue, true, false]
+                        `[true, false, true, true, false]`
                     В этом случае ntrues после обхода всего массив
-                    будет равен 0, т.к. последнее значение равно false.
-                    Для решения этой проблемы мы ввели ntrues_max,
-                    в который мы помещаем максимальное значение ntrues.
+                    будет равен 0, т.к. последнее значение равно `false`.
+                    Для решения этой проблемы мы ввели `ntrues_max`,
+                    в который мы помещаем максимальное значение `ntrues`.
             **)
             if(true = boolean_array[counter]) then
             begin
                 (**
-                    увеличиваем счетчик ntrues на 1
+                    увеличиваем счетчик `ntrues` на 1
                 **)
                 ntrues := ntrues + 1;
                 (** 
-                    Если ntrues больше чем ntrues_max,
-                    то это значение ntrues запоминаем в ntrues_max.
+                    Если `ntrues` больше чем `ntrues_max`,
+                    то это значение `ntrues` запоминаем в `ntrues_max`.
                 **)
                 if ntrues > ntrues_max then
                     ntrues_max := ntrues;
@@ -233,7 +236,7 @@ procedure main(fiction: boolean);
     В основном блоке программы происходит только вызов процедуры `main`.
 **)
 begin
-    main(true);
+    main();
 end.
 
 
