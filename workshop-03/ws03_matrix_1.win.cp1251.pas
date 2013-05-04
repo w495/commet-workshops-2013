@@ -284,7 +284,6 @@ procedure main;
     var A       : matrix_t; (** первая входная матрица  **)
     var B       : matrix_t; (** вторая входная матрица  **)
     var C       : matrix_t; (** выходная матрица        **)
-    var res     : longint;
     begin
         (** cчитываем первую матрицу **)
         A := readmatrix(MAXRANGE, MAXRANGE);
