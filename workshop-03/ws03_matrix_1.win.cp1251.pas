@@ -279,9 +279,8 @@ function multmatrix(
             1) Не запутаемся в большой программе что есть, что.
             2) Не будет пересечения пространств имен.
             3) Проще искать ошибки.
-    @param fiction фиктивный параметр, нужен только для PascalABC.
 **)
-procedure main(fiction: boolean);
+procedure main;
     var A       : matrix_t; (** первая входная матрица  **)
     var B       : matrix_t; (** вторая входная матрица  **)
     var C       : matrix_t; (** выходная матрица        **)
