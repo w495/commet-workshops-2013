@@ -123,7 +123,7 @@ program ws04_multmatrix;
  *****************************************************************************)
 
 (**
-    @const MAXRANGE Максимальный возможный размер вектора
+    @const MAXRANGE максимальный возможный размер вектора.
 **)
 const MAXRANGE = 128;
 
@@ -147,29 +147,29 @@ type cell_t  = longint;
 
 
 (**
-    @type   array_t  тип массива из cell_t
+    @type   array_t  тип массива из `cell_t`.
 **)
 type array_t  = array[1..MAXRANGE] of cell_t;
 
 (**
-    @type   array_t  тип массива из cell_t
+    @type   array_t  тип массива из `cell_t`.
 **)
-type matrixcontent_t  = array[1..MAXRANGE] of array_t;      
+type matrixcontent_t  = array[1..MAXRANGE] of array_t;
 
 (**
-    @type   matrix_t   тип матрицы — содержимое и размерность
+    @type   matrix_t   тип матрицы — содержимое и размерность.
 **)
 type matrix_t = record
     (**
-        @field  content содержимое матрицы
+        @field  content содержимое матрицы.
     **)
     content     :matrixcontent_t;
     (**
-        @field  nrows   количество строк
+        @field  nrows   количество строк.
     **)
     nrows       :size_t;
     (**
-        @field  nrows   количество столбцов
+        @field  nrows   количество столбцов.
     **)
     ncolumns    :size_t;
     (**
@@ -184,7 +184,7 @@ end;
 
 (**
     @fn matrix_read 
-        Считывает матрицу размером nrows, ncolumns со стандартного ввода
+        Считывает матрицу размером `nrows`, `ncolumns` со стандартного ввода
         и возвращает ее.
 **)
 function matrix_read(): matrix_t;
@@ -305,7 +305,6 @@ function matrix_mult(A, B :matrix_t) :matrix_t;
             1) Не запутаемся в большой программе что есть, что.
             2) Не будет пересечения пространств имен.
             3) Проще искать ошибки.
-    @param fiction фиктивный параметр, нужен только для PascalABC.
 **)
 procedure main(fiction: boolean);
     var A       : matrix_t; (** первая входная матрица  **)
@@ -330,7 +329,7 @@ procedure main(fiction: boolean);
     В основном блоке программы происходит только вызов процедуры `main`.
 **)
 begin
-    main(true);
+    main();
 end.
 
 

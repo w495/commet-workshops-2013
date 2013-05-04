@@ -118,14 +118,14 @@ type size_t  = word;
 type cell_t  = longint;
 
 (**
-    @type   array_t  тип массива из cell_t
+    @type   array_t  тип массива из `cell_t`
 **)
 type array_t  = array[1..MAXRANGE] of cell_t;
 
 (**
-    @type   array_t  тип массива из cell_t
+    @type   array_t  тип массива из `cell_t`
 **)
-type matrixcontent_t  = array[1..MAXRANGE] of array_t;      
+type matrixcontent_t  = array[1..MAXRANGE] of array_t;
 
 (**
     @type   matrix_t   тип матрицы — содержимое и размерность.

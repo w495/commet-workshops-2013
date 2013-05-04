@@ -68,7 +68,7 @@ type array_t  = array[1..MAXRANGE] of cell_t;
 (**
     @type   array_t  тип массива из cell_t
 **)
-type matrixcontent_t  = array[1..MAXRANGE] of array_t;      
+type matrixcontent_t  = array[1..MAXRANGE] of array_t;
 
 (**
     @type   matrix_t   тип матрицы — содержимое и размерность.
@@ -118,7 +118,7 @@ type direction_t = (
 
 (**
     @fn matrix_read 
-        Считывает матрицу размером nrows, ncolumns со стандартного ввода
+        Считывает матрицу размером `nrows`, `ncolumns` со стандартного ввода
         и возвращает ее.
 **)
 function matrix_read(): matrix_t;
