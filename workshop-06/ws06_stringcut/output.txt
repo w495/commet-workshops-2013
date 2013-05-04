@@ -1,0 +1,120 @@
+As cameras become more pervasive in our daily life
+, vast amounts of video data are generated. The po
+pularity of YouTube and similar websites such as T
+udou and Youku provides strong evidence for the in
+creasing role of video in society. One of the main
+ chal
+This book provides an overview of emerging new app
+roaches to video search and mining based on promis
+ing methods being developed in the computer vision
+ and image analysis community. Video search and mi
+ning is a rapidly evolving discipline whose aim is
+ to c
+The objective of this book is to present the lates
+t advances in video search and mining covering bot
+h theoretical approaches and practical application
+s. The book provides researchers and practitioners
+ a comprehensive understanding of the startof-the-
+art i
+The target audience of this book is mainly enginee
+rs and students working on video analysis in vario
+us disciplines, e.g. computer vision, pattern reco
+gnition, information technology, image processing,
+ and artificial intelligence. The book is intended
+ to b
+The origin of this book stems from the immense suc
+cess of the First International Workshop on Video 
+Mining (VM’08), held in conjunction with the IEE
+E International Conference on Data Mining 2008. Th
+is workshop gathered experts from different fields
+ work
+The book comprises both theoretical advances and a
+pplications in video search and mining. The organi
+zation of the book reflects the combination of ana
+lytical and practical topics addressed throughout 
+the book. We have divided the book chapters into f
+ive p
+Part I. Motion Trajectory Analysis: Object motion 
+trajectories describe the rich dynamic content of 
+video data. Motion trajectory analysis plays an im
+portant role in video mining and has been exploite
+d for various applications, e.g. video retrieval, 
+video
+Chapter 1 is focused on the latest research in mot
+ion trajectory analysis for video search and minin
+g. The main methodologies for the description of m
+otion trajectories, as well as the indexing techni
+ques and similarity metrics used in the retrieval 
+proce
+Several aspects of motion trajectory analysis incl
+uding their representation, indexing, similarity, 
+invariance, and application are addressed in Chapt
+er 3. For instance, a representation of motion tra
+jectories that is invariant to camera view is intr
+oduce
+Examples of the use of motion trajectory analysis 
+in real world applications provide a vivid illustr
+ation and help the reader gain a deeper insight in
+to the potential of motion trajectory analysis in 
+video search and mining. Part II. High-Dimensional
+ Vide
+Chapter 4 explores extraction of features that ref
+lect three-dimensional structural information embe
+dded in videos. Three-dimensional features venture
+ beyond traditional video features, e.g. two-dimen
+sional appearance-based features or spatio-tempora
+l fea
+Models designed to understand, organize and utiliz
+e acquired high-dimensional video representation a
+re considered. The goal is to extract semantically
+ meaningful information from a large collection of
+ samples in a high-dimensional space. Specifically
+, in 
+Part III. Semantic Video Analysis: The topic of un
+derstanding videos by semantic learning has been a
+n important research area over the past decade. Th
+e formalism of semantic activity analysis includin
+g ontological representation of domain knowledge, 
+stati
+Video genre inference, a technique that automatica
+lly clusters and tags video data and thus facilita
+tes user browsing, search and retrieval, provides 
+an important practical illustration of semantic in
+ference in video analysis. A comprehensive introdu
+ction
+Chapter 8 explores the problem of semantic visual 
+learning from weakly labeled web video. A general 
+tenet of learning theory is that an infallible sup
+ervisor always provides useful information that yi
+elds improved results. In the context of learning 
+from 
+Automatic face recognition is one of the most acti
+ve research areas in computer vision. It allows au
+tomatic identification and verification of a perso
+n from a static image or video sequences. In contr
+ast to traditional static image-based approaches, 
+video
+Because of the large number of broadcast channels 
+and TV news programs, finding news videos of inter
+est can be a difficult task. Chapter 10 presents a
+n interactive framework for personalized news vide
+o recommendation. The personalized system allows n
+ews s
+Part V. Video Mining: The final theme of the book 
+is focused on empirical tasks in video mining. The
+ scope of the discussion ranges from low-level tas
+ks, such as motion detection and re-occurrence ide
+ntification to semantic-level tasks. Motion is an 
+impor
+Another critical facet of video data is represente
+d by pattern re-occurrence in video sequences. The
+ problem of detection of (almost)-repetitive patte
+rn occurrence in video footage is an important tas
+k in video mining. Examples of recurring video seq
+uence
+ The preparation of this book has been an arduous 
+task and required the devotion of many people. We 
+would like to thank all the authors for their trem
+endous effort and dedication in preparing the book
+ chapters. We would also like to thank all of the 
+revie

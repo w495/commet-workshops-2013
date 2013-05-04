@@ -1,0 +1,14 @@
+\[
+    \theta_{(i),j,k} =
+        \left(
+            \frac{|\eta_i(\nv)|_{\mathfrak{m}(\nv)}}
+                {|\eta_j(\sv[k])|_{\mathfrak{m}(\sv[k])}},
+            \cdots,
+            \frac{|\eta_i(\nv)|_{\mci(\nv)}}
+                {|\eta_j(\sv[k])|_{\mci(\sv[k])}}
+                    = \frac{1}{1} = 1,
+            \cdots,
+            \frac{|\eta_i(\nv)|_{\mathfrak{M}(\nv)}}
+                {|\eta_j(\sv[k])|_{\mathfrak{M}(\sv[k])}}
+        \right).
+\]

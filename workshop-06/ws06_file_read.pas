@@ -19,7 +19,7 @@ var string_len: integer;
 
 
 begin
-    assign(f,'work.txt');
+    assign(f,'output.txt');
     reset(f);
     string_counter := 0;
     max_string_len := 0;
