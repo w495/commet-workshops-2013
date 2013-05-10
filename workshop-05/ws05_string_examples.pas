@@ -9,8 +9,15 @@
 
 program ws05_string_examples;
 
+type industry = (
+    sdfsdf,
+    sfasd,
+    sdasdad,
+    asdsad,
+);
 
-procedure main;
+
+procedure main
     var s1      :string;
     var s2      :string;
     var s3      :string;
