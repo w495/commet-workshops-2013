@@ -1,3 +1,13 @@
+(*****************************************************************************
+ *
+ *  @doc        Операции с файлом: разбиение на строки по заданной ширине. 
+ *              Компактная версия.
+ *  @author     Илья w-495 Никитин <w@w-495.ru> 
+ *  @date       2013.05.05 11:47:51
+ *  @version    1.0
+ *
+ *****************************************************************************)
+ 
 program ws06_stringcut;
 
 const LIMIT = 50;
@@ -21,7 +31,7 @@ begin
     begin
         readln(inputfile, str);
         strlen := length(str);
-        nsteps := (strlen div LIMIT); // 2
+        nsteps := (strlen div LIMIT);
         for step := 1 to nsteps do 
         begin
             newstr  :=  copy(str, 1 + (LIMIT * (step - 1)), LIMIT); 
