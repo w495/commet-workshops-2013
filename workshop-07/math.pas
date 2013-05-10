@@ -1,4 +1,14 @@
-program getgmode;
+(*****************************************************************************
+ *
+ *  @doc        Графика: графики функций.
+ *              Компактная версия.
+ *  @author     Илья w-495 Никитин <w@w-495.ru> 
+ *  @date       2013.05.09 01:40:00
+ *  @version    1.0
+ *
+ *****************************************************************************)
+ 
+program math;
 
 {$ifdef LINUX}
     uses ptcgraph, ptccrt;
@@ -240,17 +250,6 @@ procedure fun5_draw(step : integer);
     
 (** 
     @fn draw_scene рисует сцену целиком.
-        
-        Сначала рисуем цель, с помощью `target_draw`.
-        Потом рисуем прицел (`sightpoint_draw`).
-        Делаем задержку по времени, чтобы пользователь 
-        успел увидеть сцену. Скрываем цель, с помощью `target_draw`.
-        Скрываем прицел (`sightpoint_draw`).
-   
-    @param sightpoint_fcolor    видимый цвет прицела;
-    @param sightpoint_bcolor    невидимый цвет прицела;
-    @param target_fcolor        видимый цвет прицела;
-    @param target_bcolor,       невидимый цвет прицела;
 **)
 procedure draw_scene(step: integer);
     begin
