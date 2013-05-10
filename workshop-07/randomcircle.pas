@@ -1,7 +1,7 @@
 program getgmode;
 
 {$ifdef LINUX}
-    uses ptcgraph, crt;
+    uses ptcgraph, ptccrt;
 {$endif}
 {$ifdef WINDOWS}
     uses graph, crt;
@@ -20,14 +20,15 @@ begin
     x:=300;
     y:=180;
     r:=20;
-    t:=20;
+    t:=10;
     
     repeat
         setcolor(white);
-        circle(x,y,r); {рисуем белую окружность}
+        circle(x,y,r); 
         delay(t);
         setcolor(black);
-        circle(x,y,r); {рисуем черную окружность}
+        circle(x,y,r);
+        
         x:= x + (random(5)-random(5));
         y:= y + (random(5)-random(5));
         writeln('x = ', x, ' y = ', y, ' r = ', r, ' t = ', t);
@@ -38,7 +39,8 @@ begin
         (x > getmaxx) or
         (y > getmaxy) or
         (x < 0) or
-        (y < 0)
+        (y < 0) or
+        keypressed()
     );
 
     delay(400);
