@@ -8,20 +8,18 @@
 
 # Содержимое
     .
-    ├──input.txt
-    ├──output.txt
-    ├──README.md
-    ├──ws06_brackets
-    │   ├──input.txt
-    │   ├──output.txt
-    │   └── ws06_brackets_with_eof.pas
-    ├──ws06_file_dre.pas                Удаление, переименование. 
-    ├──ws06_file_read.pas               Чтение из текстового файла. 
-    ├──ws06_file_write.pas              Запись в текстовый файл. 
-    └── ws06_stringcut
-        ├──fls.py
-        ├──input.txt
-        ├──output.txt
-        └── ws06_stringcut.pas
-
+    ├── ws06_brackets                   Поиск лишних закрывающихся скобок.
+    │   ├── ws06_brackets_with_eof.pas  Решение задачи. 
+    │   ├── input.txt                   Входной файл для задачи.
+    │   └── output.txt                  Выходной файл для задачи.
+    ├── ws06_stringcut                  Pазбиение на строки по заданной ширине. 
+    │   ├── ws06_stringcut.pas          Решение задачи.
+    │   ├── fls.py                      Решение задачи на Python.
+    │   ├── input.txt                   Входной файл для задачи.
+    │   └── output.txt                  Выходной файл для задачи.
+    ├── ws06_file_dre.pas               Удаление, переименование. 
+    ├── ws06_file_read.pas              Чтение из текстового файла. 
+    ├── ws06_file_write.pas             Запись в текстовый файл. 
+    ├── input.txt                       Входной файл.
+    └── output.txt                      Выходной файл.
 
