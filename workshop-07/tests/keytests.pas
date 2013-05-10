@@ -1,4 +1,11 @@
-uses ptccrt;
+program keytests;
+
+{$ifdef LINUX}
+    uses ptccrt;
+{$endif}
+{$ifdef WINDOWS}
+    uses crt;
+{$endif}
 
 var c : char;
     i : longint;

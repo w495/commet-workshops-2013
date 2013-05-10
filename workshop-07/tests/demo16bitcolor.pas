@@ -1,5 +1,11 @@
 program demo16bitcolor;
-uses ptcgraph;
+
+{$ifdef LINUX}
+    uses ptcgraph;
+{$endif}
+{$ifdef WINDOWS}
+    uses graph;
+{$endif}
 
 var
     driver: smallint;  // номер драйвера
